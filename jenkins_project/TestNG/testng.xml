@@ -1,0 +1,45 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+  
+<suite name="KuleshSuite"  verbose="1" parallel="tests" thread-count="2">
+  
+  <!--
+  <test name="Sample Test Case" >
+   <parameter name="browser" value="firefox"/> 
+        <classes>     
+          <class name="TestCases.actitime" />
+          <class name="TestCases.actitime2" />
+        </classes>
+  </test>
+ -->
+ 
+ 
+ 
+ <test name="Run on Firefox">
+ 	<parameter name="browser" value="firefox"/>
+	 	<classes>
+	 	<class name="TestCases.actitime" />
+	 	<class name="TestCases.actitime2" />
+	    </classes>
+  </test>	
+  
+    
+  <test name="Run on Chrome">
+ 	<parameter name="browser" value="chrome"/>
+	 	<classes>
+	 	<class name="TestCases.actitime" />
+	 	<class name="TestCases.actitime2" />
+	    </classes>
+  </test>
+ 
+ <!-- 
+   <test name="Run on IE">
+ 	<parameter name="browser" value="IExplore"/>
+	 	<classes>
+	 	<class name="TestCases.actitime" />
+	 	<class name="TestCases.actitime2" />
+	    </classes>
+  </test>
+ 
+  -->
+  
+</suite>

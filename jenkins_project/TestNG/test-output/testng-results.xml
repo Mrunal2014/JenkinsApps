@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results skipped="0" failed="0" total="4" passed="4">
+  <reporter-output>
+  </reporter-output>
+  <suite name="KuleshSuite" duration-ms="507988" started-at="2014-03-27T08:45:43Z" finished-at="2014-03-27T08:54:11Z">
+    <groups>
+    </groups>
+    <test name="Run on Chrome" duration-ms="466749" started-at="2014-03-27T08:45:43Z" finished-at="2014-03-27T08:53:30Z">
+      <class name="TestCases.actitime2">
+        <test-method status="PASS" signature="setup(java.lang.String)[pri:0, instance:TestCases.actitime2@6f7ce9]" name="setup" is-config="true" duration-ms="306272" started-at="2014-03-27T14:17:35Z" finished-at="2014-03-27T14:22:41Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[chrome]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method status="PASS" signature="login()[pri:0, instance:TestCases.actitime2@6f7ce9]" name="login" duration-ms="46773" started-at="2014-03-27T14:22:41Z" finished-at="2014-03-27T14:23:28Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- login -->
+        <test-method status="PASS" signature="teardown()[pri:0, instance:TestCases.actitime2@6f7ce9]" name="teardown" is-config="true" duration-ms="1783" started-at="2014-03-27T14:23:28Z" finished-at="2014-03-27T14:23:30Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- teardown -->
+      </class> <!-- TestCases.actitime2 -->
+      <class name="TestCases.actitime">
+        <test-method status="PASS" signature="setup(java.lang.String)[pri:0, instance:TestCases.actitime@998b08]" name="setup" is-config="true" duration-ms="3360" started-at="2014-03-27T14:15:43Z" finished-at="2014-03-27T14:15:47Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[chrome]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method status="PASS" signature="login()[pri:0, instance:TestCases.actitime@998b08]" name="login" duration-ms="106755" started-at="2014-03-27T14:15:47Z" finished-at="2014-03-27T14:17:33Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- login -->
+        <test-method status="PASS" signature="teardown()[pri:0, instance:TestCases.actitime@998b08]" name="teardown" is-config="true" duration-ms="1752" started-at="2014-03-27T14:17:33Z" finished-at="2014-03-27T14:17:35Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- teardown -->
+      </class> <!-- TestCases.actitime -->
+    </test> <!-- Run on Chrome -->
+    <test name="Run on Firefox" duration-ms="507988" started-at="2014-03-27T08:45:43Z" finished-at="2014-03-27T08:54:11Z">
+      <class name="TestCases.actitime2">
+        <test-method status="PASS" signature="setup(java.lang.String)[pri:0, instance:TestCases.actitime2@1b26af3]" name="setup" is-config="true" duration-ms="314897" started-at="2014-03-27T14:17:43Z" finished-at="2014-03-27T14:22:58Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[firefox]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method status="PASS" signature="login()[pri:0, instance:TestCases.actitime2@1b26af3]" name="login" duration-ms="73308" started-at="2014-03-27T14:22:58Z" finished-at="2014-03-27T14:24:11Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- login -->
+        <test-method status="PASS" signature="teardown()[pri:0, instance:TestCases.actitime2@1b26af3]" name="teardown" is-config="true" duration-ms="30" started-at="2014-03-27T14:24:11Z" finished-at="2014-03-27T14:24:11Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- teardown -->
+      </class> <!-- TestCases.actitime2 -->
+      <class name="TestCases.actitime">
+        <test-method status="PASS" signature="setup(java.lang.String)[pri:0, instance:TestCases.actitime@15b9e68]" name="setup" is-config="true" duration-ms="19755" started-at="2014-03-27T14:15:43Z" finished-at="2014-03-27T14:16:03Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[firefox]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method status="PASS" signature="login()[pri:0, instance:TestCases.actitime@15b9e68]" name="login" duration-ms="99955" started-at="2014-03-27T14:16:03Z" finished-at="2014-03-27T14:17:43Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- login -->
+        <test-method status="PASS" signature="teardown()[pri:0, instance:TestCases.actitime@15b9e68]" name="teardown" is-config="true" duration-ms="38" started-at="2014-03-27T14:17:43Z" finished-at="2014-03-27T14:17:43Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- teardown -->
+      </class> <!-- TestCases.actitime -->
+    </test> <!-- Run on Firefox -->
+  </suite> <!-- KuleshSuite -->
+</testng-results>

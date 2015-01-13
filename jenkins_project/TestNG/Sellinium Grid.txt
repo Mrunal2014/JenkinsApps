@@ -1,0 +1,88 @@
+=======================================================================
+Running the test cases on different browsers on Same machine
+=======================================================================
+
+
+1) Starting the Hub on the host:
+F:\Kulesh\TestNG\lib>java -jar selenium-server-standalone-2.39.0.jar -role hub
+
+2) Starting Google Chrome node on port 5556:
+F:\Kulesh\TestNG\lib>java -jar selenium-server-standalone-2.39.0.jar -role webdriver -hub http://localhost:4444/grid/register -browser browserName=chrome,platform=WINDOWS -port 5556 -Dwebdriver.chrome.driver=F:\WorkSpace\Sellinium\chromedriver.exe
+
+
+3) Starting the Firefox node on the default node port:
+F:\Kulesh\TestNG\lib>java -jar selenium-server-standalone-2.39.0.jar -role webdriver -hub http://localhost:4444/grid/register -browser browserName=firefox,platform=WINDOWS
+
+4) Starting IE
+F:\Kulesh\TestNG\lib>java -jar selenium-server-standalone-2.39.0.jar -role webdriver -hub http://localhost:4444/grid/register -browser browserName=iexplore,platform=WINDOWS
+
+
+
+5) Starting the slave on the remote node:
+a) start the hub
+b) create the json file as below:
+
+
+=================================================
+
+
+{
+ "class": "org.openqa.grid.common.RegistrationRequest",
+ "capabilities": [
+ {
+ "seleniumProtocol": "WebDriver",
+ "browserName": "firefox",
+ "version": "10",
+ "maxInstances": 1,
+ "platform" : "WINDOWS"
+ }
+ ],
+ "configuration": { 
+ "port": 8989,
+ "register": true,
+ "host": "192.168.14.170",
+ "proxy": "org.openqa.grid.selenium.proxy.DefaultRemoteProxy",
+ "maxSession": 2,
+ "hubHost": "192.168.14.135",
+ "role": "webdriver",
+ "registerCycle": 5000,
+ "hub": "http://192.168.14.135:4444/grid/register",
+ "hubPort": 4444,
+ "remoteHost": "http://192.168.14.170:8989"
+ }
+}
+
+==================================================
+
+c) start the slave using the following command  
+
+java -jar selenium-server-standalone-2.39.0.jar -role webdriver -nodeConfig selenium-node-mac-ff901.cfg.json
+
+
+
+
+6) Also one need to modify the testng.xml as below if we want to run on multiple node:
+
+========================================testng.xml============================
+
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+  
+<suite name="KuleshSuite"  verbose="1" parallel="classes" thread-count="2">
+
+<test name="Run on Chrome ">
+ 	<parameter name="browser" value="chrome"/>
+	 	<classes>
+	 	<class name="TestCases.actitime" />
+	    </classes>
+  </test>	
+  
+  <test name="Run on Firefox">
+ 	<parameter name="browser" value="firefox"/>
+	 	<classes>
+	 	<class name="TestCases.actitime2" />
+	    </classes>
+  </test>
+ 
+</suite>
+
+==============================================================================
